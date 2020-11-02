@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import {LogIn} from '/home/david/baldonic-tienda/src/app/services/logIn.service';
+import {LogIn} from '../../services/logIn.service';
 
 
 @Component({

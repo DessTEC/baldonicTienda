@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder,Validators, NgControl, FormControl} from '@angular/forms';
-import {ContactModel} from '/home/david/baldonic-tienda/src/app/models/contact.model'
-import {ContactService} from '/home/david/baldonic-tienda/src/app/services/contact.service';
+import {ContactModel} from '../../models/contact.model'
+import {ContactService} from '../../services/contact.service';
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',

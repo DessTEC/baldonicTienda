@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {CuentaModel} from '/home/david/baldonic-tienda/src/app/models/cuenta.model';
+import {CuentaModel} from '../../models/cuenta.model';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({

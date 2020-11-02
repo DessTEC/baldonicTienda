@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {Apollo} from 'apollo-angular';
-import {contactData} from '/home/david/baldonic-tienda/src/app/operations/mutation';
+import {contactData} from '../operations/mutation';
 
 @Injectable({
   providedIn: 'root'

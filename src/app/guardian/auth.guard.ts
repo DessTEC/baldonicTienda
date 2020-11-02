@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree, Router } from '@angular/router';
 import { Observable } from 'rxjs';
-import {LogIn} from '/home/david/baldonic-tienda/src/app/services/logIn.service';
+import {LogIn} from '../services/logIn.service';
 import { map, take } from 'rxjs/operators';
 
 @Injectable({

@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {RegisterModel} from '/home/david/baldonic-tienda/src/app/models/register.model';
-import {SignUp} from '/home/david/baldonic-tienda/src/app/services/signUp.service';
+import {RegisterModel} from '../../models/register.model';
+import {SignUp} from '../../services/signUp.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import {LogIn} from '/home/david/baldonic-tienda/src/app/services/logIn.service';
-import {LoginData} from '/home/david/baldonic-tienda/src/app/models/login'
+import {LogIn} from '../../services/logIn.service';
+import {LoginData} from '../../models/login'
 
 const hasNumber = /\d/;
 const hasLetter = /[a-zA-Z]/g;
