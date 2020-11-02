@@ -1,0 +1,28 @@
+<div class="registra">
+  <div class="medium-list">
+      <div class="list-viewer-wrapper">
+          <div class="list-header-title">Contact</div>
+          <form [formGroup]="contactForm" (ngSubmit)="contactForm.valid" >
+              <div class="form-container">
+                  <mat-form-field>
+                      <input id="name" matInput formControlName="name" [(ngModel)]="contact.name" placeholder="Name">
+                      <mat-error *ngIf="contactForm.controls.name.invalid">{{getErrorMessageName()}}</mat-error>
+                  </mat-form-field>
+                  <mat-form-field>
+                      <input id="email" matInput formControlName="email" [(ngModel)]="contact.email" placeholder="Email">
+                      <mat-error *ngIf="contactForm.controls.email.invalid">{{getErrorMessageEmail()}}</mat-error>
+                  </mat-form-field>
+                  <div class="form-group">
+                      <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3" placeholder="Message" [(ngModel)]="contact.message" formControlName="message"></textarea>
+                  </div>
+                  <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="materialContactFormCopy" [(ngModel)]="contact.check" formControlName="check">
+                      <label class="form-check-label" for="materialContactFormCopy">Accept terms and conditions</label>
+                  </div>
+                  <button mat-button class="divider" type="submit" class="mat-raised-button" [disabled]="!contactForm.valid" (click)="sendEmail()">Send</button>
+              </div>
+          </form>
+      </div>
+  </div>
+</div>
+

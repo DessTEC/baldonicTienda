@@ -1,0 +1,24 @@
+.contenedor{
+    position: relative;
+    display: inline-block;
+}
+.centrado{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    width: 1500px;
+    height: 200px;
+    transform: translate(-50%, -50%);
+    background:  rgba(255, 255, 255, 0.288);
+}
+
+.imagen{
+    max-width: 100%;
+}
+
+.header{
+    padding-top:50px;
+    font-size:90px;
+    line-height: 60px;
+    text-align: center;
+}

@@ -1,0 +1,21 @@
+<div class="contenedor">
+    <img class="imagen" src="./assets/img/prs.jpg" > 
+</div>
+
+<div class="card">
+    <div class="card-body">
+        <div class="row">
+            <div class="col"></div>
+           
+           <div class="col-md-8">
+               <div class="row">
+                    <div class="col-md-4" *ngFor="let producto of productos | async">
+                       <app-product-item [name]=producto.name [description]=producto.description [price]=producto.price [img]=producto.img></app-product-item>
+                   </div>    
+               </div>
+           </div>
+       
+           <div class="col"></div>
+       </div>
+    </div>
+</div>

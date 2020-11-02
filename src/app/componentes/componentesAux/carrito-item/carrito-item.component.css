@@ -1,0 +1,64 @@
+body{
+    background: rgba(255, 255, 255, 0);
+}
+
+.card{
+    padding: 3% 0% 2% 1%;
+    position: relative;
+    left: 20%;
+}
+
+.row{
+    margin-top: 1%;
+}
+
+/*Titulo del objeto*/
+h1{
+    font-size: 24px;
+    margin-bottom: 2%;
+    position: relative;
+    left: 10%;
+}
+
+.pr{
+    position: relative;
+}
+/*headers como precio, total*/
+h2{
+    font-size: 20px;
+    position: relative;
+    top: 25%;
+}
+
+/*Cantidades como precio*/
+h3{
+    font-size: 18px;
+}
+.pre {
+    position: relative;
+    left: 32%;
+    top: 3%
+}
+
+/*Imagen*/
+.bd-placeholder-img-card-img-top{
+    position: relative;
+    left: 2.5%;
+    margin-right: 10%;
+}
+
+/* Icono */
+.icono{
+    position: relative;
+    left: 90%;
+    bottom: 7%;
+}
+
+/* Quantity box */
+.cantidad{
+    position: relative;
+    left: 5%;
+    top: 3%;
+    max-width: 60px;
+    height: 30px;
+}

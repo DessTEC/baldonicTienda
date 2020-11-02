@@ -1,0 +1,49 @@
+<div class="login-page">
+    <mat-card class="mat-elevation-z12">
+      <mat-card-title style="text-align:center;">Welcome!</mat-card-title>
+      <mat-tab-group mat-stretch-tabs class="example-stretched-tabs">
+        <mat-tab label="Sign Up">
+          <mat-card-content>
+            <form [formGroup]="registerForm" (ngSubmit)="registerForm.valid">
+                <div class="form-container">
+                    <mat-form-field>
+                        <input id="name" matInput formControlName="name" [(ngModel)]="Newuser.name" placeholder="Name" name="name">
+                        <mat-error *ngIf="registerForm.controls.name.invalid">{{getErrorMessageNameR()}}</mat-error>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input id="email" matInput formControlName="email" [(ngModel)]="Newuser.email" placeholder="Email">
+                        <mat-error *ngIf="registerForm.controls.email.invalid">{{getErrorMessageEmailR()}}</mat-error>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input id="password" matInput formControlName="password" [(ngModel)]="Newuser.password" placeholder="Password" [type]="hideR ? 'password':'text'">
+                        <mat-icon matSuffix (click)="hideR = !hideR">{{hideR ? 'visibility': 'visibility_off'}}</mat-icon>
+                        <mat-error *ngIf="registerForm.controls.password.invalid">{{getErrorMessagePasswordR()}}</mat-error>
+                    </mat-form-field>
+                    <button type="button" class="btn btn-warning btn-lg subir" [disabled]="!registerForm.valid" (click)="saveR()">Register</button>
+                </div>
+            </form>
+          </mat-card-content>
+        </mat-tab>
+        <mat-tab label="Sign In">
+            <mat-card-content>
+                <form [formGroup]="loginForm" (ngSubmit)="loginForm.valid">
+                        <div class="form-container">
+                            <mat-form-field>
+                                <input id="email" matInput formControlName="email" [(ngModel)]="Existuser.email" placeholder="Email">
+                                <mat-error *ngIf="loginForm.controls.email.invalid">{{getErrorMessageEmailL()}}</mat-error>
+                            </mat-form-field>
+                            <mat-form-field>
+                                <input id="password" matInput formControlName="password" [(ngModel)]="Existuser.password" placeholder="Password" [type]="hideL ? 'password':'text'">
+                                <mat-error *ngIf="loginForm.controls.password.invalid">{{getErrorMessagePasswordL()}}</mat-error>
+                                <mat-icon matSuffix (click)="hideL = !hideL">{{hideL ? 'visibility': 'visibility_off'}}</mat-icon>
+                            </mat-form-field>
+                            <button type="button" class="btn btn-warning btn-lg subir" [disabled]="!loginForm.valid" (click)="saveL()">Login</button>
+                        </div>
+                </form>
+            </mat-card-content>
+          </mat-tab>
+      </mat-tab-group>
+    </mat-card>
+  </div>
+
+

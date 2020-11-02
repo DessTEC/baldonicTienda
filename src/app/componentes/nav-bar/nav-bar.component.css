@@ -1,0 +1,32 @@
+body{
+    margin:0;
+}
+.mat-toolbar {
+    color: #fff;
+    background-color: rgb(255, 255, 255);
+ }
+
+.home{
+    font-size:18px;
+    color:black;
+    text-align:center;
+}
+
+.espacio {
+    flex-grow:1;
+}
+
+.barra{
+    font-size:18px;
+    color:black;
+    text-align:center;
+}
+
+.active{
+    background-color:rgba(255, 181, 3, 1);
+}
+
+.imagen{
+    width: 160px;
+}
+

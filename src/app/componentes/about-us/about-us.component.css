@@ -1,0 +1,29 @@
+.contenedor{
+    position: relative;
+    display: inline-block;
+}
+.centrado{
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    width: 1300px;
+    height: 260px;
+    transform: translate(-50%, -50%);
+    background:  rgba(255, 255, 255, 0.75);
+}
+
+.imagen{
+    max-width: 100%;
+}
+
+@font-face {
+    font-family: "Ab Font";
+    src: url("src/assets/font/FUTRFW.TTF");
+}
+
+.header{
+    font-family: "Ab Font";
+    font-size:30px;
+    line-height: 60px;
+    text-align: center;
+}

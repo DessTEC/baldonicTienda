@@ -1,0 +1,16 @@
+<div class="carrito">
+    <div class="row">
+        <div class="row-1">
+            <div *ngFor="let cartItem of cartItems | async">
+                <app-carrito-item [name]=cartItem.name [price]=cartItem.price [image]=cartItem.image></app-carrito-item>
+            </div>
+        </div>
+        <div class="direc">
+            <app-direccion></app-direccion>
+        </div>
+    </div>
+</div>
+
+
+
+

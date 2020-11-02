@@ -1,0 +1,26 @@
+body{
+    background: rgba(255, 255, 255, 0);
+}
+
+.card{
+    position: relative;
+    padding: 5%;
+    width: 80%;
+    height: 30%;
+}
+
+.card-footer{
+    margin-top: 8%;
+    position: relative;
+    height: 30%;
+}
+
+.row-4 h3{
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+
+.direcB .btn{
+    width: 100%;
+    margin-top: 7% ;
+}

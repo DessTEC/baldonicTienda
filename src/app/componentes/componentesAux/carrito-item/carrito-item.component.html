@@ -1,0 +1,21 @@
+<body>
+    <div class="card mb-4 shadow-sm" style="width: 65%; height: 17%;">
+        <h1><b>{{name}}</b></h1>
+        <div class= "row">
+            <img class="bd-placeholder-img-card-img-top" width="25%" [src]="imagePath"/>
+            <div class="row row-cols-2">
+                <div class="cant"> <h2> <b>CANTIDAD</b></h2></div>
+                <div class="pr"> <h2><b> PRECIO </b></h2></div>
+                <input class= "cantidad" type="number" value="1">
+                <div class="pre">
+                    <h3>${{price}} MXN</h3>
+                </div>
+                <div class="icono">
+                    <button mat-fab color="warn" style="background: rgb(255, 181, 3);" aria-label="Example icon button with a delete icon">
+                      <mat-icon>delete</mat-icon>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

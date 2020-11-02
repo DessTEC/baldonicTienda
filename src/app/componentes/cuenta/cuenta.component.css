@@ -1,0 +1,132 @@
+.cuenta{
+    margin: 5% 0% 0% 37%;
+    width: 100%;
+    height: 100%;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    
+}
+  
+.card-footer{
+    margin-top: 0.5%;
+}
+
+  /* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+ /* Imagen */
+img{
+    width: 100%;
+    height: 106%;
+}
+
+ /* Nombre, correo, etc */
+h2{
+    font-size: 25px;
+    margin-top: 3%;
+}
+
+.conf{
+    margin-bottom: 3%;
+
+}
+
+.cuenta h3{
+    margin-left: 23%;
+}
+
+ /* Header Cuenta */
+h1{
+    font-size: 40px;
+    width: 40%;
+    margin: 2% 0% 3% 41%;
+}
+
+ /* Boton */
+ button{
+     margin-bottom: 10%;
+     margin-left: 39.2%;
+ }
+
+ /* Elementos del contenedor de cuenta */
+
+.nombre h2{
+    margin-left: 27.5%;
+}
+
+.nombre mat-form-field{
+    margin-left: 13%;
+}
+
+.contra mat-form-field{
+    margin-left: 18.7%;
+}
+
+.conf mat-form-field{
+    margin-left: 24.7%;
+}
+
+.contra h2{
+    margin-left: 16%;
+}
+
+.nombre{
+    margin-left: 28%;
+}
+
+.contra{
+    margin-left: 23%;
+}
+
+.conf h2{
+    margin-left: 7%;
+}
+
+.conf{
+    margin-left: 17%;
+}
+
+/* Direcciones */
+
+.card{
+    margin-left: 7%;
+}
+
+.direc{
+    margin-top: 0%;
+    margin-left: 3%;
+}
+
+.direc h2{
+    margin-left: 40%;
+}
+
+.direc h3{
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+
+.direc button{
+    position: relative;
+    left: 35%;
+    margin-bottom: 3%;
+}
+
+.direc button:hover{
+    color: white;
+}
+
+.añadir button{
+    margin-left: 39.6%;
+}
+
+.cuenta button{
+    margin-left: 41%;
+}

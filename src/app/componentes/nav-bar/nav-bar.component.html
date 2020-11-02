@@ -1,0 +1,15 @@
+<mat-toolbar>
+  <mat-toolbar-row>
+    <img class = "imagen" src= "./assets/img/logo2.png">
+    <button mat-button routerLink="/test-imagen">Prueba</button>
+    <span class="espacio"></span>
+    <button mat-button class="barra" routerLink="/shop" routerLinkActive="active">SHOP</button>
+    <button mat-button class="barra" routerLink="/about-us" routerLinkActive="active">ABOUT US</button>
+    <button mat-button class="barra" routerLink="/contact" routerLinkActive="active">CONTACT</button>
+    <button mat-button class="barra" *ngIf="!(isLoggedIn$ | async)" routerLink="/register" routerLinkActive="active">SIGN UP</button>
+    <button mat-button class="barra" *ngIf="isLoggedIn$ | async" routerLink="/register" routerLinkActive="active" (click)="logOut()">LOG OUT</button>
+    <button mat-icon-button class="barra" *ngIf="isLoggedIn$ | async" routerLink="/carrito" routerLinkActive="active">
+      <mat-icon>shopping_cart</mat-icon>
+    </button>
+  </mat-toolbar-row>
+</mat-toolbar>

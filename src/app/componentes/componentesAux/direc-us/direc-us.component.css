@@ -1,0 +1,68 @@
+.fondo{
+    background-image: url(src/assets/img/cuenta.jpg);
+    background-position: 50% 50%;
+    background-size: cover;
+    width:100% ;
+    height: 92.5%;
+    padding-top: 10%;
+}
+
+.card{
+    margin-left: 20%;
+    margin-top: 0%;
+}
+
+.direc h2{
+    font-size: 25px;
+    margin: 3% 0% 0% 5%;
+}
+
+/* Botones */
+
+.row{
+    margin-top: 2%;
+    margin-left: 57%;
+}
+
+.dir button{
+    width: 100%;
+    margin: 8% 0% 10% 75%;
+}
+
+.cu button{
+    margin: 14% 0% 0% 65%;
+}
+
+.dir button:hover{
+    color: white;
+}
+
+.cu button:hover{
+    color: white;
+}
+
+
+/* Partes del form */
+
+.direc .uno,
+.direc .dos,
+.direc .row-3{
+    margin-top: 4%;
+    margin-left: 10%;
+}
+
+.direc input,
+.direc select{
+    font-size: 16px;
+    margin-right: 5%;
+}
+
+.direc label{
+    font-size: 16px;
+    margin-right: 2%;
+}
+
+.direc .form-check{
+    font-size: 18px;
+    margin-top: 4%;
+}
