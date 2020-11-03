@@ -26,7 +26,8 @@ import { CarritoItemComponent } from './componentes/componentesAux/carrito-item/
 import { DireccionComponent } from './componentes/componentesAux/direccion/direccion.component';
 import { MisDirecComponent } from './componentes/componentesAux/mis-direc/mis-direc.component';
 import { DirecUsComponent } from './componentes/componentesAux/direc-us/direc-us.component';
-import { CuentaComponent } from './componentes/cuenta/cuenta.component'; 
+import { CuentaComponent } from './componentes/cuenta/cuenta.component';
+import { DetProdComponent } from './componentes/componentesAux/det-prod/det-prod.component'; 
 
 
 @NgModule({
@@ -46,6 +47,7 @@ import { CuentaComponent } from './componentes/cuenta/cuenta.component';
     MisDirecComponent,
     DirecUsComponent,
     CuentaComponent,
+    DetProdComponent,
   ],
   imports: [
     BrowserModule,

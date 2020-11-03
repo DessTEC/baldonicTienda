@@ -11,6 +11,7 @@ import {TestImageComponent} from './test-image/test-image.component';
 import {DirecUsComponent} from './componentes/componentesAux/direc-us/direc-us.component';
 import {MisDirecComponent} from './componentes/componentesAux/mis-direc/mis-direc.component';
 import {CuentaComponent} from './componentes/cuenta/cuenta.component';
+import { DetProdComponent } from './componentes/componentesAux/det-prod/det-prod.component';
 
 const routes: Routes = [
   {path:'', component: HomeComponent},
@@ -22,6 +23,7 @@ const routes: Routes = [
   {path:'test-imagen', component: TestImageComponent},
   {path:'direccionN', component:DirecUsComponent},
   {path:'mis-direc', component:MisDirecComponent},
+  {path:'det-prod', component:DetProdComponent},
   {path:'cuenta', component:CuentaComponent}
 ];
 
