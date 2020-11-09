@@ -1,11 +1,11 @@
 <div class="fondo">
     <div class="contenedor" style="width: 55%; height: 80%;">
         <div class="row">
-            <img class="bd-placeholder-img-card-img-top" width="38%" src="https://www.nutricarrito.com/21923-large_default/paleta-de-caramelo-lucas-muecas-sabor-chamoy-con-chile-en-polvo-24-g.jpg"/>
+            <img class="bd-placeholder-img-card-img-top" width="38%" [src]="imagePath"/>
             <div class="info">
-                <h1><b>PALETA DE CARAMELO</b></h1>
-                <h2> $10 MXN </h2>
-                <h2> COLOR : MORADO</h2>
+                <h1><b>{{Producto.name}}</b></h1>
+                <h2> ${{Producto.price}} MXN </h2>
+                <h2> COLOR:</h2>
                 <button class="color" mat-fab color="warn" style="background: rgb(107, 39, 185);" aria-label="Example icon button with a delete icon"></button>
                 <button class="color" mat-fab color="warn" style="background: rgb(255, 176, 49);" aria-label="Example icon button with a delete icon"></button>
                 <button class="color" mat-fab color="warn" style="background: rgb(250, 77, 46);" aria-label="Example icon button with a delete icon"></button>

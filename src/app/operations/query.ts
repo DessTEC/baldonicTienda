@@ -33,6 +33,18 @@ export const showCart=gql`
     }
 `;
 
+export const getProductInfo=gql`
+    query getProductInfo {
+        getProductInfo{
+            sku,
+            name,
+            price,
+            description,
+            img
+        }
+    }
+`;
+
 
 
 
