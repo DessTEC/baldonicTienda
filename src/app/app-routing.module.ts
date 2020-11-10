@@ -24,6 +24,7 @@ const routes: Routes = [
   {path:'direccionN', component:DirecUsComponent},
   {path:'mis-direc', component:MisDirecComponent},
   {path:'det-prod/:sku/:name/:price/:description/:img', component:DetProdComponent},
+  {path:'det-prod', component:DetProdComponent},
   {path:'cuenta', component:CuentaComponent}
 ];
 

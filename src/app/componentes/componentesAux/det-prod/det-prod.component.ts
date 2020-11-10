@@ -1,8 +1,9 @@
 import { Component, OnInit} from '@angular/core';
 import {CartService} from '../../../services/cart.service';
 import {Producto} from '../../../models/producto.model';
-import { ActivatedRoute} from '@angular/router';
+import { ActivatedRoute, Router} from '@angular/router';
 import { DomSanitizer } from '@angular/platform-browser';
+import {LogIn} from '../../../services/logIn.service';
 
 @Component({
   selector: 'app-det-prod',
@@ -19,19 +20,46 @@ export class DetProdComponent implements OnInit {
   };
 
   selectedColor: string
-  
-  constructor(private route: ActivatedRoute, private _sanitizer: DomSanitizer) { }
+
+  constructor(private route: ActivatedRoute, private _sanitizer: DomSanitizer, private authService:LogIn, private router: Router) { }
   imagePath;
 
   ngOnInit(): void {
-    this.Producto.sku= this.route.snapshot.params.sku;
-    this.Producto.name= this.route.snapshot.params.name;
-    this.Producto.price= this.route.snapshot.params.price;
-    this.Producto.description= this.route.snapshot.params.description;
-    this.Producto.img= this.route.snapshot.params.img;
-
+    if(localStorage.getItem('product') != null){
+      let product = JSON.parse( localStorage.getItem('product') );
+      if(product.hasOwnProperty('direction')){
+        this.Producto.sku= product.sku;
+        this.Producto.name= product.name;
+        this.Producto.price= product.price;
+        this.Producto.description= product.description;
+        this.Producto.img= product.img;
+        localStorage.removeItem("product");
+      }else{
+        this.Producto.sku= this.route.snapshot.params.sku;
+        this.Producto.name= this.route.snapshot.params.name;
+        this.Producto.price= this.route.snapshot.params.price;
+        this.Producto.description= this.route.snapshot.params.description;
+        this.Producto.img= this.route.snapshot.params.img;
+        localStorage.removeItem("product");
+      }
+    }else{
+      this.Producto.sku= this.route.snapshot.params.sku;
+      this.Producto.name= this.route.snapshot.params.name;
+      this.Producto.price= this.route.snapshot.params.price;
+      this.Producto.description= this.route.snapshot.params.description;
+      this.Producto.img= this.route.snapshot.params.img;
+    }
     this.imagePath = this._sanitizer.bypassSecurityTrustResourceUrl('data:image;base64,' 
-    + this.Producto.img);
+      + this.Producto.img);
+  }
+
+  checkUser(){
+    if (this.authService.verifyToken()==true) {
+      this.router.navigate(['/contact']); 
+    }else{
+      localStorage.setItem("product",JSON.stringify(this.Producto));
+      this.router.navigate(['/register']); 
+    }  
   }
 
 }

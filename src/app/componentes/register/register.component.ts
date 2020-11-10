@@ -46,7 +46,6 @@ export class RegisterComponent implements OnInit {
       'email':[this.Existuser.email,[Validators.required,Validators.email]],
       'password':[this.Existuser.password,[Validators.required,Validators.minLength(6),Validators.maxLength(30)]]
     });
-
   }
 
   getErrorMessageNameR(){
@@ -91,6 +90,12 @@ export class RegisterComponent implements OnInit {
       this.authservice.signIn(this.Existuser.email,this.Existuser.password).subscribe((respuesta)=>{
         console.log(respuesta);
         localStorage.setItem("token",respuesta);
+        if(localStorage.getItem('product') != null){
+          let product = JSON.parse( localStorage.getItem('product') );
+          localStorage.removeItem("product");
+          product.direction='/register';
+          localStorage.setItem("product",JSON.stringify(product));
+        }
         this.authservice.login();
       },
       (error)=>{

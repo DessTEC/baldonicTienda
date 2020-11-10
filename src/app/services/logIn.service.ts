@@ -41,7 +41,11 @@ export class LogIn {
 
   login(){
     this.loggedIn.next(true);
-    this.router.navigate(['/shop']);
+    if(localStorage.getItem('product') != null){
+      this.router.navigate(['/det-prod']);
+    }else{
+      this.router.navigate(['/shop']);
+    }  
   }
 
   changeState(state:boolean){
@@ -51,7 +55,7 @@ export class LogIn {
   logOut(){
     this.loggedIn.next(false);
     localStorage.removeItem("token");
-    this.router.navigate(['/register']);
+    this.router.navigate(['/register, Producto.sku, Producto.name, Producto.price, Producto.description, Producto.img']);
   }
 
   verifyToken() {
