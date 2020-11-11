@@ -5,27 +5,44 @@
             <div class ="cuenta">
                 <h1><b>CUENTA</b></h1>
                 <h3> En esta sección puedes editar tu información</h3>
-                <div class="nombre">
-                    <h2>Nombre</h2>
-                    <mat-form-field>
-                        <input id="name" matInput formControlName="name" placeholder="Nombre">
-                    </mat-form-field>
+                <div class ="column">
+                    <form [formGroup]="nombreForm" (ngSubmit)="nombreForm.valid">
+                        <div class="nombre">
+                            <h2>Nombre</h2>
+                            <mat-form-field>
+                                <input id="name" matInput formControlName="newName" placeholder="Nombre" [(ngModel)]="name.newName">
+                            </mat-form-field>
+                        </div>
+                        <div class="nameB">
+                            <button type="submit" class="btn btn-warning" style="color: white;" [disabled]="!nombreForm.valid" > Guardar cambios </button>
+                        </div>
+                    </form>
                 </div>
-                <form [formGroup]="registerForm" (ngSubmit)="registerForm.valid">
-                    <div class="contra">
-                        <h2>Nueva contraseña</h2>
-                        <mat-form-field>
-                            <input id="password" matInput formControlName="password" placeholder="Contraseña" [(ngModel)]="user.password" type="password">
-                        </mat-form-field>
-                    </div>
-                    <div class="conf">
-                        <h2>Confirmar nueva contraseña</h2>
-                        <mat-form-field>
-                            <input id="passCon" matInput formControlName="passCon" placeholder="Contraseña" [(ngModel)]="user.passCon" type="password">
-                        </mat-form-field>
-                    </div>
-                    <button type="submit" class="btn btn-warning" style="color: white;" [disabled]="!registerForm.valid" > Guardar cambios </button>
-                </form>
+                <div class="column" >
+                    <form [formGroup]="changeForm" (ngSubmit)="changeForm.valid">
+                        <div class="contrV">
+                            <h2>Contraseña actual</h2>
+                            <mat-form-field>
+                                <input id="oldPass" matInput formControlName="oldPass" placeholder="Contraseña" [(ngModel)]="user.oldPass" type="password">
+                            </mat-form-field>
+                        </div>
+                        <div class="contra">
+                            <h2>Nueva contraseña</h2>
+                            <mat-form-field>
+                                <input id="password" matInput formControlName="password" placeholder="Contraseña" [(ngModel)]="user.password" type="password">
+                            </mat-form-field>
+                        </div>
+                        <div class="conf">
+                            <h2>Confirmar nueva contraseña</h2>
+                            <mat-form-field>
+                                <input id="passCon" matInput formControlName="passCon" placeholder="Contraseña" [(ngModel)]="user.passCon" type="password">
+                            </mat-form-field>
+                        </div>
+                        <div class="passB">
+                            <button type="submit" class="btn btn-warning" style="color: white;" [disabled]="!changeForm.valid" > Guardar cambios </button>
+                        </div>
+                    </form>
+                </div>
             </div>
             <div class="card mb-4 shadow-sm" style="width: 90%; height: 17%;">
                 <div class="direc">

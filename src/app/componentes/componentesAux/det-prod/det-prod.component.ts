@@ -4,6 +4,7 @@ import {Producto} from '../../../models/producto.model';
 import { ActivatedRoute, Router} from '@angular/router';
 import { DomSanitizer } from '@angular/platform-browser';
 import {LogIn} from '../../../services/logIn.service';
+import {CartProd} from '../../../models/cartProd.model'
 
 @Component({
   selector: 'app-det-prod',
@@ -18,6 +19,17 @@ export class DetProdComponent implements OnInit {
     description: "",
     img: "",
   };
+
+  carrito: CartProd= {
+    quantity:1,
+    id_product:"",
+    id_order:0,
+    design:1,
+    size:0,
+    image:""
+  };
+
+  hide=true;
 
   selectedColor: string
 
@@ -60,6 +72,47 @@ export class DetProdComponent implements OnInit {
       localStorage.setItem("product",JSON.stringify(this.Producto));
       this.router.navigate(['/register']); 
     }  
+  }
+
+  hideC(){
+    this.hide = !this.hide
+  }
+
+  sizeS(){
+    this.carrito.size = 10;
+  }
+  sizeM(){
+    this.carrito.size = 15;
+  }
+  sizeL(){
+    this.carrito.size = 20;
+  }
+  sizeXL  (){
+    this.carrito.size = 25;
+  }
+
+  color1(){
+    this.carrito.design = 1;
+  }
+  color2(){
+    this.carrito.design = 2;
+  }
+  color3(){
+    this.carrito.design = 3;
+  }
+  color4(){
+    this.carrito.design = 4;
+  }
+  color5(){
+    this.carrito.design = 5;
+  }
+
+  show(){
+      console.log(this.carrito);
+  }
+
+  img(){
+    this.carrito.image = "jiwji2i939392jeu2e2i";
   }
 
 }
