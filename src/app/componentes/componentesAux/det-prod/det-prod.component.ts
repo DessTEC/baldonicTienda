@@ -4,6 +4,7 @@ import {Producto} from '../../../models/producto.model';
 import { ActivatedRoute, Router} from '@angular/router';
 import { DomSanitizer } from '@angular/platform-browser';
 import {LogIn} from '../../../services/logIn.service';
+import { FormGroup, FormBuilder,Validators, NgControl, FormControl} from '@angular/forms';
 import {CartProd} from '../../../models/cartProd.model'
 
 @Component({
@@ -29,11 +30,13 @@ export class DetProdComponent implements OnInit {
     image:""
   };
 
+  carritoForm: FormGroup;
+
   hide=true;
 
   selectedColor: string
 
-  constructor(private route: ActivatedRoute, private _sanitizer: DomSanitizer, private authService:LogIn, private router: Router) { }
+  constructor(private route: ActivatedRoute, private _sanitizer: DomSanitizer, private authService:LogIn, private router: Router, private formBuilder:FormBuilder) { }
   imagePath;
 
   ngOnInit(): void {
@@ -63,6 +66,10 @@ export class DetProdComponent implements OnInit {
     }
     this.imagePath = this._sanitizer.bypassSecurityTrustResourceUrl('data:image;base64,' 
       + this.Producto.img);
+    
+    this.carritoForm=this.formBuilder.group({
+        'quantity':[this.carrito.quantity,[Validators.required], Validators.minLength(1)]
+    });
   }
 
   checkUser(){
