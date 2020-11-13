@@ -14,7 +14,7 @@
                             </mat-form-field>
                         </div>
                         <div class="nameB">
-                            <button type="submit" class="btn btn-warning" style="color: white;" [disabled]="!nombreForm.valid" > Guardar cambios </button>
+                            <button type="submit" class="btn btn-warning" style="color: white;" [disabled]="!nombreForm.valid" (click)="updateUserName()" > Guardar cambios </button>
                         </div>
                     </form>
                 </div>
@@ -23,23 +23,26 @@
                         <div class="contrV">
                             <h2>Contraseña actual</h2>
                             <mat-form-field>
-                                <input id="oldPass" matInput formControlName="oldPass" placeholder="Contraseña" [(ngModel)]="user.oldPass" type="password">
+                                <input id="oldPass" matInput formControlName="oldPass" placeholder="Contraseña" [(ngModel)]="user.oldPass" [type]="hideOld ? 'password':'text'" >
+                                <mat-icon matSuffix (click)="hideOld = !hideOld">{{hideOld? 'visibility': 'visibility_off'}}</mat-icon>
                             </mat-form-field>
                         </div>
                         <div class="contra">
                             <h2>Nueva contraseña</h2>
                             <mat-form-field>
-                                <input id="password" matInput formControlName="password" placeholder="Contraseña" [(ngModel)]="user.password" type="password">
+                                <input id="password" matInput formControlName="password" placeholder="Contraseña" [(ngModel)]="user.password" [type]="hideCon ? 'password':'text'" >
+                                <mat-icon matSuffix (click)="hideCon = !hideCon">{{hideCon? 'visibility': 'visibility_off'}}</mat-icon>
                             </mat-form-field>
                         </div>
                         <div class="conf">
                             <h2>Confirmar nueva contraseña</h2>
                             <mat-form-field>
-                                <input id="passCon" matInput formControlName="passCon" placeholder="Contraseña" [(ngModel)]="user.passCon" type="password">
+                                <input id="passCon" matInput formControlName="passCon" placeholder="Contraseña" [(ngModel)]="user.passCon" [type]="hidePass ? 'password':'text'" >
+                                <mat-icon matSuffix (click)="hidePass = !hidePass">{{hidePass? 'visibility': 'visibility_off'}}</mat-icon>
                             </mat-form-field>
                         </div>
                         <div class="passB">
-                            <button type="submit" class="btn btn-warning" style="color: white;" [disabled]="!changeForm.valid" > Guardar cambios </button>
+                            <button type="submit" class="btn btn-warning" style="color: white;" [disabled]="!changeForm.valid" (click)="updateUserPassword()"> Guardar cambios </button>
                         </div>
                     </form>
                 </div>

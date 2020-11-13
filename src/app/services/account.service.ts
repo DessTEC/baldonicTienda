@@ -3,6 +3,7 @@ import { Apollo } from 'apollo-angular';
 import {updateUserName} from '../operations/mutation';
 import {updateUserPassword} from '../operations/mutation';
 import {addAddress} from '../operations/mutation';
+import {HttpHeaders} from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -14,21 +15,31 @@ export class AccountService {
   public updateUserName(new_name: string){
     return this.apollo.mutate({
       mutation: updateUserName,
+      context:{
+        headers: new HttpHeaders({
+          Authorization: localStorage.getItem("token")
+        })
+      },
       variables: {
         new_name
       }
     });
   }
 
-  public updateUserPassword(old_password: string, new_password: string){
-    let passwordPair={
+  updateUserPassword(old_password: string, new_password: string){
+    let password={
       old_password,
       new_password
     }
     return this.apollo.mutate({
       mutation: updateUserPassword,
+      context:{
+        headers: new HttpHeaders({
+          Authorization: localStorage.getItem("token")
+        })
+      },
       variables: {
-        passwordPair
+        password
       }
     });
   }

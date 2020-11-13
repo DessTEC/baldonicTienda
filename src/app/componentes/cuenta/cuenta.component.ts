@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {CuentaModel} from '../../models/cuenta.model';
 import {NameModel} from '../../models/name.model';
+import {AccountService} from '../../services/account.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
@@ -23,9 +24,10 @@ export class CuentaComponent implements OnInit {
   changeForm: FormGroup;
   nombreForm: FormGroup;
 
-  constructor(private formBuilder:FormBuilder) { }
-  hide=true;
-  hideC=true;
+  constructor(private formBuilder:FormBuilder, private accountService: AccountService) { }
+  hideOld=true;
+  hideCon=true;
+  hidePass=true;
 
   ngOnInit(): void {
     this.changeForm=this.formBuilder.group({
@@ -36,6 +38,28 @@ export class CuentaComponent implements OnInit {
     this.nombreForm=this.formBuilder.group({
       'newName' : [this.name.newName, [Validators.required]],
     });
+  }
+
+  updateUserName(){
+    this.accountService.updateUserName(this.name.newName).subscribe((respuesta)=>{
+      console.log(respuesta.data);
+    },
+    (error)=>{
+      console.log("MI ",error);
+    });
+  }
+
+  updateUserPassword(){
+    if(this.user.passCon==this.user.password){
+      this.accountService.updateUserPassword(this.user.oldPass,this.user.password).subscribe((respuesta)=>{
+        console.log(respuesta.data);
+      },
+      (error)=>{
+        console.log("MI ",error);
+      });
+    }else{
+      alert("Error");
+    }
   }
 
 }
