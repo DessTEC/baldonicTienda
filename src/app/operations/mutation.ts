@@ -16,7 +16,7 @@ mutation contactData($contact: contactInput!) {
 
 export const addProductToCart = gql`
 mutation addProductToCart($product: cartProduct!) {
-    addProductToCart(product: $prodcut)
+    addProductToCart(product: $product)
 } 
 `;
 

@@ -47,6 +47,13 @@ export class CuentaComponent implements OnInit {
     (error)=>{
       console.log("MI ",error);
     });
+    for (const field in this.nombreForm.controls) { 
+      const control = this.nombreForm.get(field); 
+      control.reset();
+      control.markAsPristine();
+      control.markAsUntouched();
+      control.updateValueAndValidity();
+    }
   }
 
   updateUserPassword(){
@@ -57,6 +64,13 @@ export class CuentaComponent implements OnInit {
       (error)=>{
         console.log("MI ",error);
       });
+      for (const field in this.changeForm.controls) { 
+        const control = this.changeForm.get(field); 
+        control.reset();
+        control.markAsPristine();
+        control.markAsUntouched();
+        control.updateValueAndValidity();
+      }
     }else{
       alert("Error");
     }

@@ -30,8 +30,8 @@ export class CartService {
     )
   }
 
-  public addProductToCart(quantity:number,id_product:string,id_order:number, design: number, size: number, image: string){
-    let productCart={
+  public addProductToCart(quantity:number,id_product:string, id_order:number, design: number, size: number, image: string){
+    let product={
       quantity,
       id_product,
       id_order,
@@ -41,8 +41,13 @@ export class CartService {
     }
     return this.apollo.mutate({
       mutation: addProductToCart,
+      context:{
+        headers: new HttpHeaders({
+          Authorization: localStorage.getItem("token")
+        })
+      },
       variables: {
-        productCart
+        product
       }
     });
   }

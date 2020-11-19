@@ -8,8 +8,10 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 export class CarritoItemComponent implements OnInit {
   @Input() name:string;
+  @Input() quantity: number;
+  @Input() size: number;
+  @Input() design: string;
   @Input() price:number;
-  @Input() description:string;
   @Input() image:string;
   
   constructor(private _sanitizer: DomSanitizer) { }

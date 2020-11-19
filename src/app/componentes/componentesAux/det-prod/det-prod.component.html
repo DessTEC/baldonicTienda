@@ -1,40 +1,40 @@
 <div class="fondo">
     <div class="contenedor" style="width: 55%; height: 80%;">
         <div class="row">
-            <img class="bd-placeholder-img-card-img-top" width="40%" src="https://www.nutricarrito.com/21923-large_default/paleta-de-caramelo-lucas-muecas-sabor-chamoy-con-chile-en-polvo-24-g.jpg"/>
+            <img class="bd-placeholder-img-card-img-top" width="40%" [src]="imagePath"/>
             <div class="info">
                 <h1><b>{{Producto.name}}</b></h1>
                 <h2> ${{Producto.price}} MXN </h2>
                 <form [formGroup]="carritoForm" (ngSubmit)="carritoForm.valid" >
                     <div class="cant">
                         <div class="row">
-                            <h2> CANTIDAD </h2>
-                            <input class= "cantidad" type="number" value="1" min ="1" formControlName="quantity" (ngModel)="carrito.quantity">
+                            <h2> CANTIDAD</h2>
+                            <input class= "cantidad" type="number" value="1" min ="1" formControlName="quantity" [(ngModel)]="carrito.quantity">
                         </div>
                     </div>
-                    <h2> COLOR : MORADO</h2>
+                    <h2> COLOR: {{selectedColor}}</h2>
                     <button class="color" mat-fab color="warn" style="background: rgb(107, 39, 185);" (click)="color1()"></button>
                     <button class="color" mat-fab color="warn" style="background: rgb(255, 176, 49);" (click)="color2()"></button>
                     <button class="color" mat-fab color="warn" style="background: rgb(250, 77, 46);" (click)="color3()"></button>
                     <button class="color" mat-fab color="warn" style="background: rgb(137, 206, 58);" (click)="color4()"></button>
                     <button class="color" mat-fab color="warn" style="background: rgb(28, 116, 35);" (click)="color5()"></button>
-                    <h2> TALLA </h2>
+                    <h2> TALLA: {{selectedSize}} </h2>
                     <button type="button" class="btn btn-light" (click)="sizeS()">S</button>
                     <button type="button" class="btn btn-light" (click)="sizeM()">M</button>
                     <button type="button" class="btn btn-light" (click)="sizeL()">L</button>
                     <button type="button" class="btn btn-light" (click)="sizeXL()">XL</button>
                     <div class="form-check">
-                        <input type="checkbox" class="form-check-input" (click)="hideC()">
+                        <input type="checkbox" class="form-check-input" (click)="changeVis()">
                         <label class="form-check-label" for="materialContactFormCopy"><b> PERSONALIZAR</b></label>
                     </div>
                     <div>
-                        <button type="button" class="btn btn-light" [hidden]= "hide" (click)="img()">SUBIR IMAGEN </button>
+                        <input style="display:none" [style.display]="vis ? 'block' : 'none'" type="file" accept="image/png, image/jpeg" (change)="handleFileInput($event.target.files)">
                     </div>
                 </form>
             </div>
         </div>
         <div class="bot">
-            <button type="button" class="btn btn-outline-warning" (click)="checkUser()" [disabled]="!carritoForm.valid" > Agregar al carrito </button>
+            <button type="button" class="btn btn-outline-warning" (click)="checkUser()" > Agregar al carrito </button>
             <button type="button" class="btn btn-outline-warning" routerLink="/shop"> Cancelar </button>
         </div>
     </div>
