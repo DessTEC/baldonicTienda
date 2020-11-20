@@ -20,5 +20,19 @@ export class CarritoItemComponent implements OnInit {
     this.imagePath = this._sanitizer.bypassSecurityTrustResourceUrl('data:image;base64,' 
     + this.image);
   }
+  sizeS(size:number){
+    if (size = 1){
+      this.name = "S";
+    }
+    else if(size = 2){
+      this.name = "M";
+    }
+    else if(size = 3){
+      this.name = "L";
+    }
+    else if(size = 4){
+      this.name = "XL";
+    }
+  }
 
 }
