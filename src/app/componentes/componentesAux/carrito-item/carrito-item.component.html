@@ -9,16 +9,16 @@
                 <div class="size"> <h2><b>TAMAÑO</b></h2></div>
                 <div></div>
                 <div class="ca">
-                    <h3>${{quantity}}</h3>
+                    <h3>{{quantity}}</h3>
                 </div>
                 <div class="pre">
                     <h3>${{price}} MXN</h3>
                 </div>
                 <div class="tam">
-                    <h3>XL</h3>
+                    <h3>{{sizeInText}}</h3>
                 </div>
                 <div class="icono">
-                    <button mat-fab color="warn" style="background: rgb(255, 181, 3);" aria-label="Example icon button with a delete icon">
+                    <button mat-fab color="warn" style="background: rgb(255, 181, 3);" aria-label="Example icon button with a delete icon" (click)="deleteItem()">
                     <span class="material-icons">delete</span>
                     </button>
                 </div>

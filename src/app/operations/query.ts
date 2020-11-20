@@ -22,6 +22,7 @@ export const showCart=gql`
     query showCart {
         showCart{
             sku,
+            id_detail,
             name,
             price,
             description,
@@ -45,6 +46,33 @@ export const getProductInfo=gql`
     }
 `;
 
+export const getUserAddresses=gql`
+    query getUserAddresses {
+        getUserAddresses{
+            street,
+            city,
+            state,
+            zip_code,
+            country,
+            phone_number,
+            instructions
+        }
+    }
+`;
+
+export const getPrincUserAddress=gql`
+    query getPrincUserAddress {
+        getPrincUserAddress{
+            street,
+            city,
+            state,
+            zip_code,
+            country,
+            phone_number,
+            instructions
+        }
+    }
+`;
 
 
 
