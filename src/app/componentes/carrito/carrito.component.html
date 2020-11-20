@@ -2,11 +2,11 @@
     <div class="row">
         <div class="row-1">
             <div *ngFor="let cartItem of cartItems | async">
-                <app-carrito-item [name]=cartItem.name [price]=cartItem.price [image]=cartItem.image [quantity]=cartItem.quantity [size]=cartItem.size [design]=cartItem.design></app-carrito-item>
+                <app-carrito-item [name]=cartItem.name [price]=cartItem.price [image]=cartItem.image [quantity]=cartItem.quantity [size]=cartItem.size [design]=cartItem.design [id_item]=cartItem.id_detail></app-carrito-item>
             </div>
         </div>
-        <div class="direc">
-            <app-direccion></app-direccion>
+        <div *ngFor="let direc of direcPrinc | async" class="direc">
+            <app-direccion [street]=direc.street [city]=direc.city [state]=direc.state [zip_code]=direc.zip_code [country]=direc.country [phone_number]=direc.phone_number [instructions]=direc.instructions></app-direccion>
         </div>
     </div>
 </div>

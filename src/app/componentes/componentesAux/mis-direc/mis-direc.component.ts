@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {AccountService} from '../../../services/account.service';
+import {DirecModel} from '../../../models/direc.model';
+
 
 @Component({
   selector: 'app-mis-direc',
@@ -7,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MisDirecComponent implements OnInit {
 
-  constructor() { }
+  constructor(private accountService: AccountService) { }
 
   ngOnInit(): void {
   }

@@ -2,6 +2,7 @@
 import { Component, OnInit } from '@angular/core';
 import {DirecModel} from '../../../models/direc.model';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import {AccountService} from '../../../services/account.service';
 
 @Component({
   selector: 'app-direc-us',
@@ -22,7 +23,7 @@ export class DirecUsComponent implements OnInit {
 
   direcForm: FormGroup;
 
-  constructor(private formBuilder:FormBuilder) { }
+  constructor(private formBuilder:FormBuilder, private accountService: AccountService) { }
 
   ngOnInit(): void {
     this.direcForm=this.formBuilder.group({
@@ -36,8 +37,21 @@ export class DirecUsComponent implements OnInit {
     });
   }
 
-  show(){
-    console.log(this.direccion);
+  addAddress(){
+    this.accountService.addAddress(this.direccion.street,this.direccion.city,this.direccion.state,this.direccion.zip_code,this.direccion.country, this.direccion.phone_number, this.direccion.instructions).subscribe((respuesta)=>{
+      console.log(respuesta.data);
+      alert("Dirección agregada!");
+      for (const field in this.direcForm.controls) { 
+        const control = this.direcForm.get(field); 
+        control.reset();
+        control.markAsPristine();
+        control.markAsUntouched();
+        control.updateValueAndValidity();
+      }
+    },
+    (error)=>{
+      console.log("MI ",error);
+    });
   }
 
 }

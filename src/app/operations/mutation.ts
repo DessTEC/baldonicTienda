@@ -37,3 +37,9 @@ mutation addAddress($address: Address!) {
     addAddress(address: $address)
 } 
 `;
+
+export const deleteItem = gql`
+mutation deleteItem($id_item: Int!) {
+    deleteItem(id_item: $id_item)
+} 
+`;

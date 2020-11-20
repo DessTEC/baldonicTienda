@@ -18,9 +18,9 @@
                         <option value="chiapas">Chiapas</option>
                         <option value="ciudad de mexico">Ciudad de México</option>
                     </select>
-                    <label for="pais">Pais:</label>
+                    <label for="pais">País:</label>
                     <select name="pais" id="pais" formControlName="country" [(ngModel)]="direccion.country">
-                        <option value="mexico">Mexico</option>
+                        <option value="mexico">México</option>
                     </select>
                 </div>
                 <div class="row-3">
@@ -29,7 +29,7 @@
             </form>
             <div class="row">
                 <div class="cu"><button type="button" class="btn btn-outline-warning" routerLink="/cuenta"> Regresar </button></div>
-                <div class="dir"><button type="button" class="btn btn-outline-warning" [disabled]="!direcForm.valid" (click)="show()"> Añadir dirección </button></div>
+                <div class="dir"><button type="button" class="btn btn-outline-warning" [disabled]="!direcForm.valid" (click)="addAddress()"> Añadir dirección </button></div>
             </div>
         </div>
     </div>

@@ -3,7 +3,9 @@ import { Apollo } from 'apollo-angular';
 import { map } from 'rxjs/operators';
 import {showCart} from '../operations/query';
 import {addProductToCart} from '../operations/mutation';
+import {deleteItem} from '../operations/mutation';
 import {getProductInfo} from '../operations/query';
+import {getPrincUserAddress} from '../operations/query';
 import {HttpHeaders} from '@angular/common/http';
 
 
@@ -59,6 +61,36 @@ export class CartService {
     }).valueChanges.pipe(
       map((result: any) => {
         return result.data.getProductInfo;
+      })
+    )
+  }
+
+  public deleteItem(id_item: number){
+    return this.apollo.mutate({
+      mutation: deleteItem,
+      context:{
+        headers: new HttpHeaders({
+          Authorization: localStorage.getItem("token")
+        })
+      },
+      variables: {
+        id_item
+      }
+    });
+  }
+
+  public getPrincUserAddress(){
+    return this.apollo.watchQuery({
+      query: getPrincUserAddress,
+      fetchPolicy: "network-only",
+      context:{
+        headers: new HttpHeaders({
+          Authorization: localStorage.getItem("token")
+        })
+      }
+    }).valueChanges.pipe(
+      map((result: any) => {
+        return result.data.getPrincUserAddress;
       })
     )
   }
