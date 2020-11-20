@@ -12,6 +12,7 @@ import {DirecUsComponent} from './componentes/componentesAux/direc-us/direc-us.c
 import {MisDirecComponent} from './componentes/componentesAux/mis-direc/mis-direc.component';
 import {CuentaComponent} from './componentes/cuenta/cuenta.component';
 import { DetProdComponent } from './componentes/componentesAux/det-prod/det-prod.component';
+import { CambiarDirComponent } from './componentes/componentesAux/cambiar-dir/cambiar-dir.component'; 
 
 const routes: Routes = [
   {path:'', component: HomeComponent},
@@ -25,7 +26,8 @@ const routes: Routes = [
   {path:'mis-direc', component:MisDirecComponent},
   {path:'det-prod/:sku/:name/:price/:description/:img', component:DetProdComponent},
   {path:'det-prod', component:DetProdComponent},
-  {path:'cuenta', component:CuentaComponent}
+  {path:'cuenta', component:CuentaComponent},
+  {path:'cambiar-dir', component:CambiarDirComponent}
 ];
 
 @NgModule({

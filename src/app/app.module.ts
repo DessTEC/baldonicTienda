@@ -28,7 +28,8 @@ import { MisDirecComponent } from './componentes/componentesAux/mis-direc/mis-di
 import { DirecUsComponent } from './componentes/componentesAux/direc-us/direc-us.component';
 import { CuentaComponent } from './componentes/cuenta/cuenta.component';
 import { DetProdComponent } from './componentes/componentesAux/det-prod/det-prod.component';
-import { OtrasDirComponent } from './componentes/componentesAux/otras-dir/otras-dir.component'; 
+import { OtrasDirComponent } from './componentes/componentesAux/otras-dir/otras-dir.component';
+import { CambiarDirComponent } from './componentes/componentesAux/cambiar-dir/cambiar-dir.component'; 
 
 
 @NgModule({
@@ -50,6 +51,7 @@ import { OtrasDirComponent } from './componentes/componentesAux/otras-dir/otras-
     CuentaComponent,
     DetProdComponent,
     OtrasDirComponent,
+    CambiarDirComponent,
   ],
   imports: [
     BrowserModule,
