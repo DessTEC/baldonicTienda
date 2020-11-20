@@ -80,3 +80,97 @@ h3{
     bottom: 8%;
 }
 
+@media (max-width: 400px){
+    body{
+        background: rgba(255, 255, 255, 0);
+    }
+    
+    .card{
+        padding: 3% 0% 2% 1%;
+        position: relative;
+        left: 20%;
+    }
+    
+    .row{
+        margin-top: 1%;
+    
+    }
+    
+    /*Titulo del objeto*/
+    h1{
+        font-size: 15px;
+        margin-bottom: 2%;
+        position: relative;
+        left: 4%;
+    }
+    .cant{
+        position: relative;
+        left: 8%;
+    }
+    
+    .pr{
+        position: relative;
+        left: 12%;
+    }
+    
+    .size{
+        position: relative;
+        left: 8%;
+    }
+    
+    /*headers como precio, total*/
+    h2{
+        font-size: 12px;
+        margin-left: 15%;
+        width: 78px;
+        position: relative;
+        top: 25%;
+    }
+    
+    /*Cantidades como precio*/
+    h3{
+        font-size: 10px;
+        margin-left: 0%;
+    }
+    
+    .ca{
+        position: relative;
+        left: 9%;
+    }
+    
+    .pre {
+        position: relative;
+        left: 2%;
+        top: 0%
+    }
+    
+    .tam{
+        position: relative;
+        left: 10%;
+    }
+    
+    /*Imagen*/
+    .bd-placeholder-img-card-img-top{
+        position: absolute;
+        left: 100.5%;
+        margin-right: 0%;
+    }
+    
+    /* Icono */
+    .icono{
+        position: relative;
+        left: 1%;
+        bottom: 0%;
+    }
+    .icono button{
+        position: relative;
+        width: 54%;
+        height: 50%;
+    }
+    .icono .material-icons{
+        position: relative;
+        bottom: 5%;
+        width: 54%;
+        height: 50%;
+    }
+}

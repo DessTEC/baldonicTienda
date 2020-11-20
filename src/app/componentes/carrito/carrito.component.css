@@ -12,9 +12,34 @@
     overflow-y: auto;
     overflow-x: hidden;
     width: 60%;
+    
  }
 
 /* Carta de la direccion */
 .direc{
     width: 40%;
+}
+
+@media (max-width: 400px){
+    .carrito{
+        background-image: url(src/assets/img/carr4.jpg);
+        background-position: 50% 50%;
+        background-size: cover;
+        width:114.26% ;
+        height: 107.3%;
+        padding: 5%;
+    }
+    
+     /* Carta del producto */
+     .row-1{
+        overflow-y: auto;
+        overflow-x: hidden;
+        width: 60%;
+        
+     }
+    
+    /* Carta de la direccion */
+    .direc{
+        width: 40%;
+    }
 }
