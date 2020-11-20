@@ -128,26 +128,26 @@ h1{
 }
 
 .direc h2{
-    margin-left: 40%;
+    margin-left: 38%;
 }
 
-.direc h3{
-    margin-top: 0%;
-    margin-bottom: 0%;
-}
 
 .direc button{
-    position: relative;
-    left: 35%;
-    margin-bottom: 3%;
+    margin-bottom: 13%;
 }
 
 .direc button:hover{
     color: white;
 }
 
+.misDi{
+    position: relative;
+    left: 12%;
+}
+
 .añadir button{
-    margin-left: 39.6%;
+    position: relative;
+    left: 10%;
 }
 
 .cuenta button{

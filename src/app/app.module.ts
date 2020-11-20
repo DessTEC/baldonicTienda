@@ -27,7 +27,8 @@ import { DireccionComponent } from './componentes/componentesAux/direccion/direc
 import { MisDirecComponent } from './componentes/componentesAux/mis-direc/mis-direc.component';
 import { DirecUsComponent } from './componentes/componentesAux/direc-us/direc-us.component';
 import { CuentaComponent } from './componentes/cuenta/cuenta.component';
-import { DetProdComponent } from './componentes/componentesAux/det-prod/det-prod.component'; 
+import { DetProdComponent } from './componentes/componentesAux/det-prod/det-prod.component';
+import { OtrasDirComponent } from './componentes/componentesAux/otras-dir/otras-dir.component'; 
 
 
 @NgModule({
@@ -48,6 +49,7 @@ import { DetProdComponent } from './componentes/componentesAux/det-prod/det-prod
     DirecUsComponent,
     CuentaComponent,
     DetProdComponent,
+    OtrasDirComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,6 @@
 <div class="carrito">
     <div class="row">
-        <div class="row-1 overflow-auto" style="height: 650px;">
+        <div class="row-1" style="height: 650px;">
             <div *ngFor="let cartItem of cartItems | async">
                 <app-carrito-item [name]=cartItem.name [price]=cartItem.price [image]=cartItem.image [quantity]=cartItem.quantity [size]=cartItem.size [design]=cartItem.design></app-carrito-item>
             </div>

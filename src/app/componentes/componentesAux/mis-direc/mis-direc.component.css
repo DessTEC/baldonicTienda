@@ -8,8 +8,10 @@
 }
 
 .contenedor{
+    overflow-y: auto;
+    overflow-x: hidden;
     border-radius: 10px;
-    padding:0.2% 0.5% 1% 1%;
+    padding:0.2% 0.5% 1% 0.1%;
     margin-left: 20%;
     background-color: white;
 }
@@ -41,19 +43,6 @@
 
 .direc .info{
     width: 38%;
-}
-
-.row{
-    margin-left: 5%;
-}
-
-.row .form-check{
-    margin-top: 5%;
-    margin-left: 1%;
-}
-
-.row .icono{
-    margin-top: 3%;
 }
 
 /* Boton de regresar */

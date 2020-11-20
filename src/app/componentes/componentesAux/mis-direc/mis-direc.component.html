@@ -1,5 +1,5 @@
 <div class="fondo">
-    <div class="contenedor overflow-auto" style="width: 60%; height: 84%;">
+    <div class="contenedor " style="width: 60%; height: 84%;">
         <div class="direc">
             <h1><b>MIS DIRECCIONES</b></h1>
             <h2>DIRECCIÓN PRINCIPAL</h2>
@@ -9,26 +9,7 @@
             <h3> 72825 </h3>
             <h3> 961 764 8723</h3>
             <h2>OTRAS DIRECCIONES</h2>
-            <div class="row">
-                <div class="info">
-                    <h3> Circuito Paolo Oriente #34 </h3>
-                    <h3> RINCONADA DE LA FORTUNA </h3>
-                    <h3> SAN ANDRES, CHOLULA, PUEBLA</h3>
-                    <h3> 72825 </h3>
-                    <h3> 961 764 8723</h3>
-                </div>
-                <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="materialContactFormCopy">
-                    <div class="label">
-                        <label class="form-check-label" for="materialContactFormCopy">Determinar como dirección principal</label>
-                    </div>
-                </div>
-                <div class="icono">
-                    <button mat-fab color="warn" style="background: rgb(255, 181, 3);" aria-label="Example icon button with a delete icon">
-                      <mat-icon>delete</mat-icon>
-                    </button>
-                </div>
-            </div>
+            <app-otras-dir></app-otras-dir>
         </div>
         <button type="button" class="btn btn-outline-warning" routerLink="/cuenta"> Regresar </button>
     </div>
