@@ -84,7 +84,7 @@ h1{
 }
 
 .contra h2{
-    margin-left: 10.4%;
+    margin-left: 11%;
 }
 
 .contra{
@@ -118,38 +118,14 @@ h1{
 
 /* Direcciones */
 
-.card{
-    margin-left: 7%;
+.cuenta button{
+    margin-left: 41%;
 }
 
 .direc{
-    margin-top: 0%;
-    margin-left: 3%;
+    margin-left: 10%;
 }
 
 .direc h2{
-    margin-left: 38%;
-}
-
-
-.direc button{
-    margin-bottom: 13%;
-}
-
-.direc button:hover{
-    color: white;
-}
-
-.misDi{
-    position: relative;
-    left: 12%;
-}
-
-.añadir button{
-    position: relative;
-    left: 10%;
-}
-
-.cuenta button{
-    margin-left: 41%;
+    margin-left: 3%;
 }

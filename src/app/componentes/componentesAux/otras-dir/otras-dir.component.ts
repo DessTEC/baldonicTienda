@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 
 @Component({
   selector: 'app-otras-dir',
@@ -6,7 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./otras-dir.component.css']
 })
 export class OtrasDirComponent implements OnInit {
-
+  @Input() street: string;
+  @Input() city: string;
+  @Input() state: string;
+  @Input() zip_code: string;
+  @Input() country: string;
+  @Input() phone_number: number;
+  @Input() instructions: string;
   constructor() { }
 
   ngOnInit(): void {

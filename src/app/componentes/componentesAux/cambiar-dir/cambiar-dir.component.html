@@ -2,7 +2,8 @@
     <div class="contenedor " style="width: 60%; height: 84%;">
         <div class="direc"> 
             <h1><b>OTRAS DIRECCIONES</b></h1>
-            <app-otras-dir></app-otras-dir>
+            <div *ngFor="let direc of otrasDirec | async" class="direc">
+                <app-otras-dir [street]=direc.street [city]=direc.city [state]=direc.state [zip_code]=direc.zip_code [country]=direc.country [phone_number]=direc.phone_number [instructions]=direc.instructions></app-otras-dir>
         </div>
         <button type="button" class="btn btn-outline-warning" routerLink="/carrito"> Regresar </button>
     </div>

@@ -10,8 +10,8 @@
 .contenedor{
     border-radius: 10px;
     padding-top: 1.5%;
-    padding-bottom:0.2% ;
-    padding-left: 0%;
+    padding-bottom:0.5% ;
+    padding-left: 5%;
     margin-left: 22%;
     background-color: white;
 }
@@ -83,4 +83,8 @@ button:hover{
 
 .info {
     margin-left: 2%;
+}
+
+img{
+    margin-right: 2%;
 }
